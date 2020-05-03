@@ -53,15 +53,3 @@ class AnnounceList(ListView):
     def get_object(self, queryset=None):
         id_ = self.kwargs['id']
         return get_object_or_404(Announce, id=id_)
-
-
-class AnnounceDelete(DeleteView):
-    template_name = 'announces/announce_delete.html'
-    model = Announce
-
-    def get_object(self, queryset=None):
-        id_ = self.kwargs['id']
-        return get_object_or_404(Announce, id=id_)
-
-    def get_success_url(self):
-        return reverse('announce:announce-list')
