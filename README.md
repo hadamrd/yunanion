@@ -20,7 +20,7 @@ What Basics to master:
 What Advanced technos to master:
  - Angular or React & nodejs for advanced interactive UI design
  
-Good Front end course in udacity (HTML, CSS, javascript):
+Good Front course (HTML, CSS, javascript):
  https://classroom.udacity.com/nanodegrees/nd0011
 
 
