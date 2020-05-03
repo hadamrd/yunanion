@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="/static/css/announce-brief.css">
+{% endblock %}
+
+{% block content %}
+    <div class="announces-list">
+        <h2>Mes annonces</h2>
+        {% for object in object_list %}
+            <div class="announce-brief-container">
+                <div class="announce-img-box">
+                    <img class="announce-img" src="{{ object.image.url }}">
+                </div>
+                <div class="announce-summary-box">
+                    <h3>{{ object.title }}</h3>
+                    <table class="table mb-0">
+                        <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>Superficie (m²)</th>
+                            <th>Type du bien</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td width="50%">{{ object.description }}</td>
+                            <td>{{ object.space }}</td>
+                            <td>{{ object.appart_type }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="announce-delete-update-box">
+                        <form method="POST" >{% csrf_token %}
+                            <input type="hidden" name="id" value={{ object.id }} />
+                            <button class="btn btn-primary" type="submit" onclick="return confirm('Are you sure you want to delete this?')">delete</button>
+                        </form>
+                        <a class="btn btn-primary" href="{{ object.id }}/update" role="button">Update</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    <a class="btn btn-primary" href="./create" role="button">Deposer une annonce</a>
+    </div>
+
+{% endblock %}
+

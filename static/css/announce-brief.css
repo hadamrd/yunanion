@@ -1,0 +1,32 @@
+.announces-list{
+    margin: 20px;
+}
+.announce-brief-container{
+    width: 80vw;
+    border: 2px solid -moz-dragtargetzone;
+    margin: 15px;
+    display: grid;
+    grid-template-areas: "image brief";
+    border-radius: 3px;
+    background-color: ghostwhite;
+    justify-content: start;
+    grid-gap: 10px;
+}
+.announce-img{
+    max-width: 100%;
+    height: 100%;
+}
+.announce-img-box{
+    max-width: 250px;
+    grid-area: image;
+    height: 100%;
+}
+.announce-summary-box{
+    grid-area: brief;
+    padding: 20px;
+    justify-content: center;
+}
+.announce-delete-update-box{
+    display: flex;
+    justify-content: space-evenly;
+}
