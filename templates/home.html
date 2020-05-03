@@ -1,15 +1,24 @@
 {% extends 'base.html' %}
 
+
+
+
 {% block content %}
 
-<div class="col-8" align="center">
-    <h1 class="mt-2">Trouver votre colocation idéale</h1>
-    <h3 class="mt-2">Des milliers de chambres à louer en france</h3>
-    <hr class="mt-0 mb-4">
-    <div class="input-group search-box">
-        <input type="text" id="search" class="form-control" placeholder="Où souhaitez-vous vivre...">
-        <span class="input-group-addon"><i class="material-icons"></i></span>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+                <h1 class="mt-2">Trouver votre colocation idéale</h1>
+                <h3 class="mt-2">Des milliers de chambres à louer en france</h3>
+                <hr>
+                <div class="input-group search-box">
+                    <input type="text" id="search" class="form-control" placeholder="Où souhaitez-vous vivre...">
+                    <span class="input-group-addon"><i class="material-icons"></i></span>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+
 
 {% endblock %}
