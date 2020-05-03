@@ -24,7 +24,7 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td>{{ object.description }}</td>
+                            <td>{{ object.description|truncatewords:20}}</td>
                             <td>{{ object.space }}</td>
                             <td>{{ object.appart_type }}</td>
                         </tr>
