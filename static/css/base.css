@@ -1,0 +1,13 @@
+html, body {
+  height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Varela Round', sans-serif;
+    background: #444;
+    color: #fffff8;
+}
+.yunan-content {
+  flex: 1 0 auto;
+}
